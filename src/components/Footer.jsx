@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
       </div>
       <p className="flex items-center gap-1 justify-center p-6">
-        <FaRegCopyright /> 2023 LazyPress | All Rights Reserved
+         2023 LazyPress | All Rights Reserved
       </p>
     </div>
   );
