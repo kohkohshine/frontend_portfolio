@@ -6,13 +6,15 @@ export default function Layout() {
   return (
     <div>
       <header>
-    <NavBar/>
+      <NavBar/>
       </header>
+
       <main>
-        <Outlet />
+      <Outlet />
       </main>
-      <footer>
-        <Footer/>
+
+     <footer> 
+      <Footer/>
       </footer>
     </div>
   );

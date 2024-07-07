@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="text-white bg-black-2 p-6">
+    <div className="text-white bg-black p-6">
       <div className="flex gap-12 justify-evenly">
         <div>
           <h4 className="font-bold hover:text-pink-lavender">PRODUCTS</h4>
