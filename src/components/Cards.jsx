@@ -2,7 +2,7 @@ import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nex
 
 export default function Cards() {
   return (
-    <Card className="max-w-[400px]">
+    <Card className="t-50 max-w-[400px]">
       <CardHeader className="flex gap-3">
         <Image
           alt="nextui logo"
@@ -12,7 +12,7 @@ export default function Cards() {
           width={40}
         />
         <div className="flex flex-col">
-          <p className="text-md">NextUI</p>
+          <p className="text-md">Next</p>
           <p className="text-small text-default-500">nextui.org</p>
         </div>
       </CardHeader>
