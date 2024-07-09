@@ -1,4 +1,4 @@
-
+import Cards from "../components/Cards";
 
 export default function Home() {
     return (
@@ -6,7 +6,7 @@ export default function Home() {
       
         <h1>Home Page</h1>
          <p>Welcome to the Home Page!</p>
-   
+   <Cards/>
         </>
     )
 }
