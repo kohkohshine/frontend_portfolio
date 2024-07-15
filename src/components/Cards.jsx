@@ -4,7 +4,7 @@ import { useState,useEffect } from "react";
 export default function Cards() {
 
   const [projects, setProjects] = useState([]);
-  const backendUrl = process.env.BACKEND_DEV || process.env.BACKEND_DEPLOY ;
+  const backendUrl = process.env.REACT_APP_BACKEND_DEV || process.env.REACT_APP_BACKEND_DEPLOY;
 
   useEffect(() => {
     fetch(`${backendUrl}/projects`)
