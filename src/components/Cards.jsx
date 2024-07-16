@@ -1,12 +1,11 @@
-import {Card, CardHeader, CardBody, CardFooter, Divider, Link, Image} from "@nextui-org/react";
-import { useState,useEffect } from "react";
+import { Card, CardHeader, CardBody, CardFooter, Divider, Link } from "@nextui-org/react";
+import { useState, useEffect } from "react";
 import axios from 'axios';
 
 export default function Cards() {
-
   const [projects, setProjects] = useState([]);
-  const backendUrl = import.meta.env.BACKEND_DEV || import.meta.env.BACKEND_DEPLOY;
-  
+  const backendUrl = import.meta.env.VITE_BACKEND_DEV || import.meta.env.VITE_BACKEND_DEPLOY;
+
   useEffect(() => {
     console.log("Backend URL:", backendUrl); // Debugging line
     if (!backendUrl) {
@@ -16,15 +15,14 @@ export default function Cards() {
 
     axios.get(backendUrl)
       .then(response => {
+        console.log("Response data:", response.data); // Debugging line
         setProjects(response.data);
+        console.log("🟢 All projects fetched!");
       })
       .catch(error => {
-        console.error('Error fetching projects:', error);
+        console.error('🛑Failed to fetch projects', error);
       });
   }, [backendUrl]);
-
-
-
 
   return (
     <div className="container mx-auto p-4">
@@ -40,13 +38,13 @@ export default function Cards() {
           <Divider />
           <CardBody>
             <p>Price: ${project.price}</p> 
-            
           </CardBody>
           <Divider />
           <CardFooter>
             <Link
               isExternal
               showAnchorIcon
+              href={project.link || 'https://hkeportfolio.netlify.app/'} 
             >
               Visit project
             </Link>
